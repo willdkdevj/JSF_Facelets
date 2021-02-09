@@ -37,7 +37,7 @@ Depois foi criado um arquivo XML (*mytags.taglib*) para mapear as TAG's, que sã
 Agora é necessário parametrizar para o *Servlet* que o nosso arquivo com as TAG's deve ser carregado ao iniciar o serviço, definindo o seguinte código:
 
 ```sh
-<context-param>
+  <context-param>
   	<param-name>javax.faces.FACELETS_LIBRARIES</param-name>
   	<param-value>/WEB-INF/mytags.taglib.xml</param-value>
   </context-param>
@@ -88,7 +88,8 @@ Para compilar e executar este projeto a partir de sua máquina, faça as etapas 
 Obrigado por ter visto meus esforços em criar um projeto JSF com Facelets!
 
 Como diria um antigo mestre:
-> Cedo ou tarde, você vai aprender, assim como eu aprendi, que existe uma diferença entre CONHECER o caminho e TRILHAR o caminho.
+> *"Cedo ou tarde, você vai aprender, assim como eu aprendi, que existe uma diferença entre CONHECER o caminho e TRILHAR o caminho."*
+>
 > Morpheus - Matrix
 
 [ECLIPSE-image]: https://img.shields.io/eclipse-marketplace/v/notepad4e?style=plastic
