@@ -32,7 +32,39 @@ Para este propósito, foi estruturado um *template* denominado *New Facelet Temp
   </div>
 ```  
 
-  Foi utilizado a tag `ui:include`
+Depois é criado um arquivo XML (*mytags.taglib*) para mapear as TAG's, que são os arquivos que criamos, e atrelamos a um *NAMESPACE* a ser imbutido nas páginas **JSF**, na qual arquivamos no diretório `WEB-INF`;
+
+Agora é necessário parametrizar para o *Servlet* que o nosso arquivo com as TAG's deve ser carregado ao iniciar o serviço, definindo o seguinte código:
+
+```sh
+<context-param>
+  	<param-name>javax.faces.FACELETS_LIBRARIES</param-name>
+  	<param-value>/WEB-INF/mytags.taglib.xml</param-value>
+  </context-param>
+```
+
+Para concluir, inserimos as TAG's personalizadas a página XHTML senguindo a estrutura do *template* ficando como apresentado na codificação a seguir:
+
+```sh
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:sn="http://mytags/supernovatech">
+
+<ui:composition template="/template.xhtml">
+	<ui:define name="header">
+		<sn:cabecalho />	    
+	</ui:define>
+	<ui:define name="content">
+	    <sn:conteudo />
+	</ui:define>
+	<ui:define name="footer">
+	    <sn:rodape />
+	</ui:define>
+</ui:composition>
+</html>
+```
+
+
   
 
 Como diria um antigo mestre:

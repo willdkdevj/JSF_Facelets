@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facelet-taglib version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmls.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd">
+	<namespace>http://mytags/supernovatech</namespace>
+	<tag>
+		<tag-name>cabecalho</tag-name>
+		<source>tags/cabecalho.xhtml</source>
+	</tag>
+	<tag>
+		<tag-name>conteudo</tag-name>
+		<source>tags/conteudo.xhtml</source>
+	</tag>
+	<tag>
+		<tag-name>rodape</tag-name>
+		<source>tags/rodape.xhtml</source>
+	</tag>
+</facelet-taglib>
